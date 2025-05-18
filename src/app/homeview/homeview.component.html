@@ -1,0 +1,32 @@
+<!-- Main container -->
+<div class="homeview-container">
+  <div class="hero-wrapper">
+    <img [src]="home.src" alt="{{ home.homeName }}" class="hero-image">
+    <div class="hero-overlay">
+      <h1 class="hero-title">{{ home.homeName }}</h1>
+    </div>
+  </div>
+
+  <div class="home-details container">
+    <section class="section-block">
+      <h2 class="section-title">About the Property</h2>
+      <p class="home-description">{{ home.description }}</p>
+    </section>
+
+    <div class="divider-line"></div>
+
+    <section class="section-block meta-section">
+      <div>
+        <span class="meta-label">Price:</span>
+        <span class="home-price">₹{{ home.price }}</span>
+      </div>
+      <button class="btn btn-book"(click)="back()">Back</button>
+    </section>
+  </div>
+
+  <!-- Sleek animated background -->
+  <ul class="bg-bubbles">
+    <li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li><li></li><li></li>
+  </ul>
+</div>

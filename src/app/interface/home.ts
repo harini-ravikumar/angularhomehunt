@@ -1,8 +1,7 @@
 export interface Home {
-    "id": number,
+    "id"?: number,
     "homeName": string,
     "src": string,
     "description": string,
     "price": string
-
 }

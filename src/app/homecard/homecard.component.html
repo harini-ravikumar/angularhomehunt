@@ -1,21 +1,20 @@
-<div class="col">
-    <div class="card">
-        <img src=home.src class="card-img-top" alt="Home with the beautiful Interiors ,inspried by the state kerala">
-        <div class="card-body">
-            <div class="row">
-                <div class="col">
-                    <h5></h5>
-                </div>
-                <div class="col text-end">
-                    <h5>$591.26(Rs.50,000)</h5>
-                </div>
-            </div>
-            <p class="card-text">A Grand Wooden Windows with ornate carvings,often decorated with brass studs or 
-                motifs,welcomes visitors.Having a central Courtyard(called Aangan),in the middle of the home,is a spot to make the 
-                timeless memories with our loved onces.Wide verandas supported by intricately carved wooden Pillars are a common features,
-                these areas provide shade and serve as an extention of the livng space.
-            </p>
-            <a href="#" class="btn btn-primary">Explore Now</a>
-        </div>
+<div class="card shadow-sm h-100 rounded-4">
+  <img
+    [src]="home?.src"
+    class="card-img-top rounded-top-4"
+    alt="Home Image"
+    style="height: 180px; object-fit: cover;"
+  >
+  <div class="card-body d-flex flex-column">
+    <div class="d-flex justify-content-between mb-2">
+      <span class="text-muted small">Home</span>
+      <span class="fw-bold">{{ home?.homeName }}</span>
     </div>
+    <p class="card-text small text-secondary" style="min-height: 60px;">
+      {{ home?.description }}
+    </p>
+    <div class="mt-auto text-end">
+      <button class="btn btn-outline-primary btn-sm rounded-pill" (click)="explore()">Explore</button>
+    </div>
+  </div>
 </div>

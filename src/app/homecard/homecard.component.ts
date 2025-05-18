@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Home } from '../interface/home';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homecard',
@@ -9,4 +10,10 @@ import { Home } from '../interface/home';
 })
 export class HomecardComponent {
 @Input() home?:Home
+constructor(private router:Router){}
+
+explore(){
+  this.router.navigate(['/homeview', this.home?.id])
+}
+
 }
